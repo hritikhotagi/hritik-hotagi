@@ -4,8 +4,9 @@ import Nav from "../Nav/Nav";
 import styles from "./MainStyles.module.css"; 
 import Hero from "../Hero/Hero"; 
 import Skills from '../Skills/Skills';
-// import Work from "./components/Work/Work";
-// import Experience from "./components/Experience/Experience";
+import Work from '../Work/Work';
+import Intro from '../Intro/Intro';
+import Experience from "../Experience/Experience";
 
 function Main() {
   return (
@@ -14,7 +15,10 @@ function Main() {
       <div className={styles.container}>
         <Outlet />
         <Hero />
+        <Intro />
         <Skills />
+        <Work />
+        <Experience />
       </div>
       
     </section>

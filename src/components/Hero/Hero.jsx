@@ -5,12 +5,12 @@ import { FaDownload } from 'react-icons/fa';
 
 function Hero() {
   return (
+    <section id="hero" className={styles.hero}>  
       <div className={styles.container}>
         <div className={styles.textContainer}>
           <h1 className={styles.name}>Hritik S Hotagi</h1>
-          <p className={styles.title}>Software Developer</p>
-          <p className={styles.title}>Full Stack Developer</p>
-          <p className={styles.title}>UI / UX Designer</p>
+          <p className={styles.title}>Freelancer | Software Developer |</p>
+          <p className={styles.title}>Full Stack Developer | UI / UX Designer</p>
           <div className={styles.icons}>
             <a href="https://www.linkedin.com/in/hritikhotagi/" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-linkedin"></i>
@@ -30,6 +30,7 @@ function Hero() {
           <img src={avatar} alt="Hritik Hotagi" className={styles.avatar} />
         </div>
       </div>
+      </section>
   );
 }
 

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
 import styles from "./NavStyles.module.css";
 import logo from "../../assets/logo.png";
 
@@ -23,19 +24,22 @@ function Nav() {
 
   return (
     <nav className={`${styles.nav} ${isScrolled ? styles.scrolled : ""}`}>
-      <NavLink to="/" className={styles.logoLink}>
+      <HashLink to="#hero" className={styles.logoLink}>
         <img src={logo} alt="Logo" className={styles.logo} />
-      </NavLink>
+      </HashLink>
       <div className={styles.navigation}>
-        <NavLink to="/skills" className={({ isActive }) => isActive ? `${styles.link} ${styles.active}` : styles.link}>
+        <HashLink smooth to="/#intro" className={styles.link}>
+          Intro
+        </HashLink>
+        <HashLink smooth to="/#skills" className={styles.link}>
           Skills
-        </NavLink>
-        <NavLink to="/work" className={({ isActive }) => isActive ? `${styles.link} ${styles.active}` : styles.link}>
+        </HashLink>
+        <HashLink smooth to="/#work" className={styles.link}>
           Work
-        </NavLink>
-        <NavLink to="/experience" className={({ isActive }) => isActive ? `${styles.link} ${styles.active}` : styles.link}>
+        </HashLink>
+        <HashLink smooth to="/#experience" className={styles.link}>
           Experience
-        </NavLink>
+        </HashLink>
       </div>
     </nav>
   );

@@ -1,8 +1,82 @@
 .work {
-    background-color: #444;
-    padding: 50px;
-    border-radius: 10px;
-    width: 80%;
-    text-align: center;
+    width: 87%;
     color: #fff;
+    margin: auto;
+    padding-top: 100px;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+  }
+  
+  .title {
+    font-size: 3rem;
+    text-align: left;
+    margin: 0 0 50px 0;
+    padding: 0;
+  }
+  
+  .content {
+    display: flex;
+    width: 100%;
+  }
+  
+  .index {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .projectButton {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: left;
+    cursor: pointer;
+    padding: 10px;
+    transition: background 0.3s;
+  }
+  
+  .projectButton:hover, .projectButton.active {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .projectInfo {
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+  }
+  
+  .projectImage {
+    width: 99%;
+    height: 70%;
+    object-fit: cover;
+    margin: auto;
+    /* margin-top: 20px; */
+    border: 6px rgb(23, 23, 23) solid;
+  }
+  
+  .projectDetails {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 25px;
+  }
+  
+  .projecttitle{
+    margin: 0;
+  }
+
+  .projectdesc{
+    margin: 0;
+    padding-top: 10px;
   }
