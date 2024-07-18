@@ -22,9 +22,11 @@ function Hero() {
               <i className="fab fa-instagram"></i>
             </a>
           </div>
-          <button className={styles.downloadBtn}>
-            <FaDownload className={styles.downloadIcon} /> Download CV
-          </button>
+          <a href="https://drive.google.com/file/d/1TaQGlp8jVhyChQukKJq730Y3cnEFy36r/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+            <button className={styles.downloadBtn}>
+                <FaDownload className={styles.downloadIcon} /> Download CV
+            </button>
+          </a>
         </div>
         <div className={styles.avatarContainer}>
           <img src={avatar} alt="Hritik Hotagi" className={styles.avatar} />

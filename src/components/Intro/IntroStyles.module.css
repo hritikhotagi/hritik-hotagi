@@ -64,10 +64,9 @@
         transform: translate(-50%, -50%) rotateX(0deg);
     }
     50% {
-        transform: translate(-50%, -50%) rotateX(60deg);
+        transform: translate(-50%, -50%) rotateX(80deg);
     }
     100% {
         transform: translate(-50%, -50%) rotateX(0deg);
     }
-
 }

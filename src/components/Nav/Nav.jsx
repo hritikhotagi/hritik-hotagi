@@ -40,6 +40,9 @@ function Nav() {
         <HashLink smooth to="/#experience" className={styles.link}>
           Experience
         </HashLink>
+        <HashLink smooth to="/#contact" className={styles.link}>
+          Reach out
+        </HashLink>
       </div>
     </nav>
   );
