@@ -1,0 +1,50 @@
+.workwithme {
+    width: 100%;
+    color: #fff;
+    margin: auto;
+    padding-top: 100px;
+  }
+  
+  .container {
+    width: 87%;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+  
+  .tag{
+    font-size: 1rem;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+  .title {
+    font-size: 3rem;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+  }
+
+  .linksContainer{
+    margin-top: 50px;
+    color: rgb(141, 141, 141);
+  }
+
+  .linkName{
+    font-size: 30px;
+    margin: 40px 0 20px ;
+  }
+
+  .link{
+    text-decoration: none;
+    color: rgb(141, 141, 141);
+    font-size: 20px;
+  }
+
+  .footer{
+    background-color: rgb(55, 55, 55);
+    padding: 0.5px;
+    padding-left: 100px;
+    font-weight: 600;
+    color: #ffffff;
+  }

@@ -1,0 +1,65 @@
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    z-index: 1000; /* Ensure the nav is above other elements */
+  }
+  
+  .scrolled {
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 36px;
+  }
+  
+  .navigation {
+    display: flex;
+    gap: 60px; /* Adjusted for better spacing */
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+  }
+  
+  .logoLink {
+    position: absolute;
+    top: 13.5px;
+    left: 20px; /* Adjusted for better placement */
+    z-index: 3;
+  }
+  
+  .logo {
+    width: 25px; /* Adjusted for visibility */
+    height: auto;
+    padding-left: 80px;
+  }
+  
+  .link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    position: relative;
+    padding: 5px 10px;
+    transition: color 0.3s ease, background-size 0.3s ease;
+    background-image: linear-gradient(120deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.094) 50%);
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    border-radius: 50px;
+  }
+  
+  .link:hover {
+    background-size: 100% 100%;
+    color: #9e9e9e; /* Change color on hover */
+  }
+  
+  .active {
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(120deg, rgba(255, 255, 0, 0) 0%, rgba(255, 255, 0, 0) 30%, rgba(250, 186, 10, 0.498) 100%);
+    background-size: 100% 100%;
+  }
+  
