@@ -37,14 +37,28 @@
 
   .link{
     text-decoration: none;
-    color: rgb(141, 141, 141);
+    color: rgb(169, 169, 169);
     font-size: 20px;
   }
 
   .footer{
     background-color: rgb(55, 55, 55);
-    padding: 0.5px;
-    padding-left: 100px;
-    font-weight: 600;
+    font-weight: 400;
     color: #ffffff;
+  }
+
+  .footer p{
+    width: 87%;
+    margin: auto;
+    padding: 10px;
+  }
+
+  @media (max-width: 768px) {
+    .linkName{
+        font-size: 25px;
+      }
+    
+      .link{
+        font-size: 18px;
+      }
   }

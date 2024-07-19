@@ -2,15 +2,18 @@
     position: fixed;
     top: 0;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 10px 20px;
     background-color: transparent;
     transition: background-color 0.3s ease;
-    z-index: 1000; /* Ensure the nav is above other elements */
+    z-index: 1000;
+ 
   }
   
+  .centre{
+    width: 90%;
+    margin: auto;
+  }
+
   .scrolled {
     background-color: rgba(0, 0, 0, 0.8);
     height: 36px;
@@ -18,7 +21,7 @@
   
   .navigation {
     display: flex;
-    gap: 60px; /* Adjusted for better spacing */
+    gap: 60px;
     position: absolute;
     top: 10px;
     left: 50%;
@@ -27,16 +30,12 @@
   }
   
   .logoLink {
-    position: absolute;
-    top: 13.5px;
-    left: 20px; /* Adjusted for better placement */
     z-index: 3;
   }
   
   .logo {
-    width: 25px; /* Adjusted for visibility */
+    width: 25px;
     height: auto;
-    padding-left: 80px;
   }
   
   .link {
@@ -54,12 +53,53 @@
   
   .link:hover {
     background-size: 100% 100%;
-    color: #9e9e9e; /* Change color on hover */
+    color: #9e9e9e;
   }
   
   .active {
     color: rgb(255, 255, 255);
     background-image: linear-gradient(120deg, rgba(255, 255, 0, 0) 0%, rgba(255, 255, 0, 0) 30%, rgba(250, 186, 10, 0.498) 100%);
     background-size: 100% 100%;
+  }
+  
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 4;
+    position: absolute;
+    top: 15px;
+    right: 30px; /* Adjusted for better placement */
+  }
+  
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px;
+    transition: all 0.3s ease;
+  }
+  
+  @media (max-width: 768px) {
+    .navigation {
+      display: none;
+      flex-direction: column;
+      background-color: rgba(0, 0, 0, 0.9);
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 200px;
+      height: 100vh;
+      padding-top: 60px;
+      gap: 20px;
+    }
+  
+    .navigation.open {
+      display: flex;
+    }
+  
+    .hamburger {
+      display: block;
+      right: 70px; /* Further adjustment for better placement */
+    }
   }
   

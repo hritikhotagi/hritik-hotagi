@@ -18,7 +18,7 @@
     text-align: left;
     margin: 0 0 50px 0;
     padding: 0;
-    width: 100%; 
+    width: 100%;
   }
   
   .image {
@@ -30,23 +30,22 @@
     width: 24%;
     height: auto;
     animation: rotateImage 5s infinite linear;
-}
-
-@keyframes rotateImage {
+  }
+  
+  @keyframes rotateImage {
     0% {
-        transform: rotateY(0deg);
+      transform: rotateY(0deg);
     }
     50% {
-        transform: rotateY(90deg);
+      transform: rotateY(90deg);
     }
     100% {
-        transform: rotateY(0deg);
+      transform: rotateY(0deg);
     }
-}
-
+  }
   
   .experienceList {
-    width: 45%; 
+    width: 45%;
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* Align items to the start */
@@ -78,5 +77,37 @@
   
   .responsibilities {
     color: #969696;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .image {
+      display: none;
+    }
+  
+    .experienceList {
+      width: 100%;
+    }
+  
+    .role {
+      font-size: 1.4rem;
+    }
+  
+    .company {
+      font-size: 1.1rem;
+    }
+  
+    .duration {
+      font-size: 1rem;
+    }
+  
+    .responsibilities {
+      font-size: 0.9rem;
+      width: 92%;
+    }
   }
   

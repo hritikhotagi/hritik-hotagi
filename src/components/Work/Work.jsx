@@ -242,7 +242,7 @@ function Work() {
                     &#10094;
                   </button>
                   {projects[selectedSection][activeProject].images.map((img, index) => (
-                    <div>
+                    <div className={styles.imageContainer}>
                         <img
                         key={index}
                         src={img}

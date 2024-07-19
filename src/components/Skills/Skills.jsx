@@ -22,7 +22,7 @@ function Skills() {
     { name: 'Git', level: 85 },
     { name: 'Postman', level: 95 },
     { name: 'MySQL', level: 90 },
-    { name: 'Java', level: 85 },
+    { name: 'Java', level: 60 },
     { name: 'Django', level: 65 },
     { name: 'Graphic Designing', level: 100 },
     { name: 'Logo', level: 100 },
