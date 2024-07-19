@@ -12,6 +12,8 @@ function WorkWithMe() {
                 <a className={styles.link} href="http://google.com">asddsfsdfsadfadsfasdfasdfsadfasdfasdfsad</a>
                 <p className={styles.linkName}>Email:</p>
                 <p className={styles.link}>hritikhotagiofficial@gmail.com</p>
+                <p className={styles.linkName}>Mobile No:</p>
+                <p className={styles.link}>+91 7975244290</p>
             </div>
         </div>
         <div className={styles.footer}>
