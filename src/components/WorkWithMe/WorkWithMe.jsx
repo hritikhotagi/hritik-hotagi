@@ -8,8 +8,8 @@ function WorkWithMe() {
             <p className={styles.tag}>Hritik S Hotagi</p>
             <p className={styles.title}>Work with me </p>
             <div className={styles.linksContainer}>
-                <p className={styles.linkName}>Client Intake Form:</p>
-                <a className={styles.link} href="http://google.com">asddsfsdfsadfadsfasdfasdfsadfasdfasdfsad</a>
+                {/* <p className={styles.linkName}>Client Intake Form:</p>
+                <a className={styles.link} href="http://google.com">asddsfsdfsadfadsfasdfasdfsadfasdfasdfsad</a> */}
                 <p className={styles.linkName}>Email:</p>
                 <p className={styles.link}>hritikhotagiofficial@gmail.com</p>
                 <p className={styles.linkName}>Mobile No:</p>
@@ -17,7 +17,7 @@ function WorkWithMe() {
             </div>
         </div>
         <div className={styles.footer}>
-            <p>Designed & Developed by Hritik</p>
+            <p>&copy; Designed & Developed by Hritik</p>
         </div>
     </section>
   )
