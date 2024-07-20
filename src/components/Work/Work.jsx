@@ -9,6 +9,8 @@ import c2 from "../../assets/web/c2.png";
 import c3 from "../../assets/web/c3.png";
 import c4 from "../../assets/web/c4.png";
 import c5 from "../../assets/web/c5.png";
+import blog from "../../assets/web/blog.png";
+
 
 import car1 from "../../assets/app/car1.png";
 import ar1 from "../../assets/app/ar1.png";
@@ -106,7 +108,7 @@ function Work() {
         title: "Blog Application",
         description:
           "The Blog Application allows users to create, edit, view, and delete blog posts, with secure authentication ensuring users can only modify their own content. Built with React, it features a responsive design, a rich text editor, and a user-friendly interface for seamless blogging.",
-        images: [cba11],
+        images: [blog],
       },
     ],
     "UI/UX": [
