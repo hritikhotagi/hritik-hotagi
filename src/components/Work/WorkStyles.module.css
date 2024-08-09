@@ -1,176 +1,198 @@
 .work {
-    width: 87%;
-    color: #fff;
-    margin: auto;
-    padding-top: 100px;
-  }
-  
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Align items to the left */
-  }
-  
-  .title {
-    font-size: 3rem;
-    text-align: left;
-    margin: 0 0 50px 0;
-    padding: 0;
-  }
-  
+  width: 87%;
+  color: #fff;
+  margin: auto;
+  padding-top: 100px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+}
+
+.title {
+  font-size: 3rem;
+  text-align: left;
+  margin: 0 0 50px 0;
+  padding: 0;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+}
+
+.index {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.projectButton {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  text-align: left;
+  cursor: pointer;
+  padding: 10px;
+  transition: background 0.3s;
+  white-space: normal; /* Ensure the text wraps instead of overflowing */
+  word-wrap: break-word; /* Ensure the text wraps instead of overflowing */
+}
+
+.projectButton:hover, .projectButton.active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.projectInfo {
+  width: 80%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+.projectDetails {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 25px;
+}
+
+.projecttitle{
+  margin: 0;
+}
+
+.projectdesc{
+  margin: 0;
+  padding-top: 10px;
+}
+
+.sectionMenu {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.sectionButton {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1rem;
+  text-align: left;
+  cursor: pointer;
+  padding: 10px;
+  transition: background 0.3s;
+  border-bottom-right-radius: 20px;
+}
+
+.sectionButton:hover, .sectionButton.activeSection {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 70%;
+}
+
+.carouselImage {
+  width: 40%;
+  height: 40%;
+  display: none;
+  margin: auto;
+}
+
+.carouselImage.active {
+  display: block;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.432);
+  border: none;
+  color: #000;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 50%;
+  padding-left: 13px;
+  padding-right: 16px;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
   .content {
-    display: flex;
-    width: 100%;
+      flex-direction: column; 
+      background-color: rgb(32, 32, 32);
+      border-radius: 10px;
   }
-  
+
   .index {
-    width: 20%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+      width: 100%; 
   }
-  
+
   .projectButton {
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 1rem;
-    text-align: left;
-    cursor: pointer;
-    padding: 10px;
-    transition: background 0.3s;
+      font-size: 1.2rem; /* Increase font size for better readability */
+      padding: 15px;
+      white-space: normal; /* Ensure text wraps */
   }
-  
-  .projectButton:hover, .projectButton.active {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-  
+
   .projectInfo {
-    width: 80%;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+      width: 100%;
+      height: auto; /* Allow content to adjust height based on content */
   }
-  
-
-  
-  .projectDetails {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 25px;
-  }
-  
-  .projecttitle{
-    margin: 0;
-  }
-
-  .projectdesc{
-    margin: 0;
-    padding-top: 10px;
-  }
-
-  .sectionMenu {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .sectionButton {
-    background: none;
-    border: none;
-    color: #ffffff;
-    font-size: 1rem;
-    text-align: left;
-    cursor: pointer;
-    padding: 10px;
-    transition: background 0.3s;
-    border-bottom-right-radius: 20px;
-  }
-  
-  .sectionButton:hover, .sectionButton.activeSection {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-  
-  .carousel {
-    position: relative;
-    width: 100%;
-    height: 70%;
-  }
-
-  /* .imageContainer{
-
-  } */
 
   .carouselImage {
-    width: 40%;
-    height: 40%;
-    display: none;
-    margin: auto;
+      width: 100%; /* Adjust the image width */
+      height: auto; /* Maintain aspect ratio */
+      margin: 0 auto;
   }
-  
-  .carouselImage.active {
-    display: block;
-  }
-  
-  .arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.432);
-    border: none;
-    color: #000;
-    font-size: 2rem;
-    cursor: pointer;
-    z-index: 1;
-    border-radius: 50%;
-    padding-left: 13px;
-    padding-right: 16px;
-  }
-  
-  .arrow.left {
-    left: 10px;
-  }
-  
-  .arrow.right {
-    right: 10px;
-  }
-  
-  .dots {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-  }
-  
-  .dot {
-    height: 10px;
-    width: 10px;
-    margin: 0 5px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    display: inline-block;
-    cursor: pointer;
-  }
-  
-  .dot.active {
-    background-color: rgba(0, 0, 0, 1);
-  }
-  
-  @media (max-width: 768px) {
-    .carouselImage {
-    width: 80%;
-    height: 100%;
-  }
+
   .carousel {
-    position: relative;
-    width: 100%;
-    height: 40%;
-    margin-top: 10%;
+      width: 100%;
+      height: auto;
   }
+
+  .arrow {
+      font-size: 1.5rem;
   }
+}

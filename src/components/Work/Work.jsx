@@ -18,6 +18,7 @@ import ar2 from "../../assets/app/ar2.png";
 import ar3 from "../../assets/app/ar3.png";
 import ar4 from "../../assets/app/ar4.png";
 
+import cnbd from "../../assets/uiux/cnbd.png";
 import cba11 from "../../assets/uiux/cba11.png";
 import cba12 from "../../assets/uiux/cba12.png";
 import cba2 from "../../assets/uiux/cba2.png";
@@ -66,6 +67,8 @@ import mb2 from "../../assets/logo/mb2.png";
 import rit from "../../assets/logo/rit.png";
 import sb21 from "../../assets/logo/sb21.png";
 import sb22 from "../../assets/logo/sb22.png";
+import sb23 from "../../assets/logo/sb23.png";
+import sb24 from "../../assets/logo/sb24.png";
 import w from "../../assets/logo/w.png";
 
 function Work() {
@@ -116,7 +119,7 @@ function Work() {
         title: "Car and Bike Analysis",
         description:
           "Will get all the analytical information about the indian vechicles, application created by Lazurus Benjamin",
-        images: [cba11,cba12,cba2,cba21,cba3,cba4,cba5],
+        images: [cnbd,cba11,cba12,cba2,cba21,cba3,cba4,cba5],
       },
       {
         title: "Deep Sea Exploration Application",
@@ -152,7 +155,7 @@ function Work() {
       {
         title: "SB2 Group",
         description: "",
-        images: [sb21,sb22],
+        images: [sb23,sb24,sb21,sb22],
       },
       {
         title: "Wish Tank",
