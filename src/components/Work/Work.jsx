@@ -93,6 +93,7 @@ function Work() {
         description:
           "Accomplished a streamlined car rental and hiring process by implementing a Java application, which led to an efficient and user-friendly booking system.",
         images: [car1],
+        githubLink: "https://github.com/hritikhotagi/CarsforUs.git"
       },
     ],
     Web: [
