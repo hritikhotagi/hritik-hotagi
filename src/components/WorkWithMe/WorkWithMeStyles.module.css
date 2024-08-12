@@ -1,50 +1,97 @@
-.workwithme {
-    width: 100%;
-    color: #fff;
-    margin: auto;
-    padding-top: 100px;
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
   }
-  
-  .container {
-    width: 87%;
-    margin: auto;
-    margin-bottom: 30px;
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
-  
-  .tag{
-    font-size: 1rem;
-    text-align: left;
-    margin: 0;
-    padding: 0;
 }
 
-  .title {
-    font-size: 3rem;
-    text-align: left;
-    margin: 0;
-    padding: 0;
+@keyframes fadeOutRight {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+}
+
+.workwithme {
+  width: 100%;
+  color: #262626;
+  margin: auto;
+  padding-top: 100px;
+  opacity: 0; /* Initially hidden */
+  transform: translateX(-30px); /* Start slightly to the left */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fadeIn {
+  animation: fadeInLeft 0.6s ease-out forwards;
+}
+
+.fadeOut {
+  animation: fadeOutRight 0.6s ease-out forwards;
+}
+
+.container {
+  width: 87%;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.tag {
+  font-size: 1rem;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.linksContainer {
+  margin-top: 50px;
+  color: rgb(73, 73, 73);
+}
+
+.linkName {
+  font-size: 30px;
+  margin: 40px 0 20px;
+}
+
+.link {
+  text-decoration: none;
+  color: rgb(76, 76, 76);
+  font-size: 20px;
+}
+
+.footer {
+  background-color: rgb(55, 55, 55);
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.footer p {
+  width: 87%;
+  margin: auto;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .linkName {
+    font-size: 25px;
   }
 
-  .linksContainer{
-    margin-top: 50px;
-    color: rgb(141, 141, 141);
+  .link {
+    font-size: 18px;
   }
-
-  .linkName{
-    font-size: 30px;
-    margin: 40px 0 20px ;
-  }
-
-  .link{
-    text-decoration: none;
-    color: rgb(141, 141, 141);
-    font-size: 20px;
-  }
-
-  .footer{
-    background-color: rgb(55, 55, 55);
-    padding: 0.5px;
-    padding-left: 100px;
-    font-weight: 600;
-    color: #ffffff;
-  }
+}

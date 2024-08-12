@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styles from "./ContactStyles.module.css";
 
 function Contact() {
@@ -10,6 +10,32 @@ function Contact() {
 
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const contactRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
+      });
+    }, {
+      threshold: 0.1, // Trigger when 10% of the section is visible
+    });
+
+    if (contactRef.current) {
+      observer.observe(contactRef.current);
+    }
+
+    return () => {
+      if (contactRef.current) {
+        observer.unobserve(contactRef.current);
+      }
+    };
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -48,17 +74,21 @@ function Contact() {
   };
 
   return (
-    <section id="contact" className={styles.contact}>
+    <section
+      id="contact"
+      className={`${styles.contact} ${isVisible ? styles.fadeIn : styles.fadeOut}`}
+      ref={contactRef}
+    >
       <div className={styles.container1}>
         <p className={styles.tag}>Contact</p>
         <p className={styles.title}>Reach out to me</p>
         {loading ? (
           <div className={styles.loader}>
             <div className={styles.container}>
-                <div className={styles.dot}></div>
-                <div className={styles.dot}></div>
-                <div className={styles.dot}></div>
-                <div className={styles.dot}></div>
+              <div className={styles.dot}></div>
+              <div className={styles.dot}></div>
+              <div className={styles.dot}></div>
+              <div className={styles.dot}></div>
             </div>
           </div>
         ) : submitted ? (

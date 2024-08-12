@@ -1,9 +1,39 @@
+@keyframes fadeInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOutToRight {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+}
+
 .skills {
     width: 87%;
     text-align: center;
-    color: #fff;
+    color: #262626;
     margin: auto;
     padding-top: 100px;
+}
+
+.visible {
+    animation: fadeIn 0.5s forwards; /* Fade in when visible */
+}
+
+.hidden {
+    animation: fadeOut 0.5s forwards; /* Fade out when not visible */
 }
 
 .container {
@@ -13,20 +43,19 @@
     justify-content: center;
 }
 
-.tag{
+.tag {
     font-size: 1rem;
     text-align: left;
     margin: 0;
     padding: 0;
 }
 
-.title{
+.title {
     font-size: 3rem;
     text-align: left;
     margin: 0 0 50px 0;
     padding: 0;
 }
-
 
 .grid {
     display: grid;
@@ -36,15 +65,26 @@
 }
 
 .skillBox {
-    background-image: linear-gradient(120deg, rgba(255, 255, 0, 0) 0%, rgba(255, 255, 0, 0) 20%, rgba(0, 0, 0, 0.498) 100%);
+    background-image: linear-gradient(120deg, rgba(255, 255, 0, 0) 0%, rgba(255, 255, 0, 0) 20%, #21b1d53d 100%);
     border-radius: 10px;
     padding: 20px;
-    color: #fff;
+    color: #383838;
     font-size: 1rem;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-50px); /* Start off-screen to the left */
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+.skillBoxVisible {
+    animation: fadeInFromLeft 1.5s forwards;
+}
+
+.skillBoxHidden {
+    animation: fadeOutToRight 1.5s forwards;
 }
 
 .skillName {
@@ -62,9 +102,7 @@
 
 .progressBar {
     height: 10px;
-    background-color: #4caf50;
-    /* background-color: linear-gradient(0deg,rgb(158, 255, 158) 0%, green 100%); */
-
+    background-color: #21b1d5;
     border-radius: 5px;
     transition: width 0.5s ease;
 }

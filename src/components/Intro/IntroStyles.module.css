@@ -1,14 +1,46 @@
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+}
+
 .intro {
     width: 100%;
     text-align: center;
-    color: #fff;
+    color: #262626;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     position: relative;
     padding-top: 30px;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Initially positioned lower */
+    transition: opacity 1s ease, transform 0.5s ease;
+}
 
+.visible {
+    animation: fadeIn 1s forwards; /* Fade in when visible */
+}
+
+.hidden {
+    animation: fadeOut 1s forwards; /* Fade out when not visible */
 }
 
 .container {
@@ -19,6 +51,7 @@
 .paragraph {
     font-family: 'Courier New', Courier, monospace;
     line-height: 1.5;
+    color: #262626;
 }
 
 .hello {
@@ -26,6 +59,7 @@
     font-size: 5rem;
     margin: 0;
     padding: 0;
+    color: #21b1d5;
 }
 
 .name{
@@ -34,6 +68,7 @@
     left: 10px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.5rem;
+    color: #262626;
 }
 
 .waveContainer {
