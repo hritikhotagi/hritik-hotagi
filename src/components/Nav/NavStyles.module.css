@@ -74,7 +74,7 @@
   .hamburger div {
     width: 25px;
     height: 3px;
-    background-color: #fff;
+    background-color: #21b1d5;
     margin: 4px;
     transition: all 0.3s ease;
   }

@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import styles from "./ExperienceStyles.module.css";
 import image1 from "../../assets/line2.png";
 
 function Experience() {
+  const [isVisible, setIsVisible] = useState(false);
+  const experienceRef = useRef(null);
+
   const experiences = [
     {
       role: "Solutions Engineer Level – 1",
@@ -50,8 +53,32 @@ function Experience() {
     },
   ];
 
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
+      });
+    }, {
+      threshold: 0.1, // Trigger when 10% of the section is visible
+    });
+
+    if (experienceRef.current) {
+      observer.observe(experienceRef.current);
+    }
+
+    return () => {
+      if (experienceRef.current) {
+        observer.unobserve(experienceRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <section id="experience" className={styles.experience}>
+    <section id="experience" className={styles.experience} ref={experienceRef}>
       <p className={styles.title}>Experience</p>
       <div className={styles.container}>
         <div className={styles.image}>
@@ -63,7 +90,12 @@ function Experience() {
         </div>
         <div className={styles.experienceList}>
           {experiences.map((exp, index) => (
-            <div key={index} className={styles.experienceItem}>
+            <div
+              key={index}
+              className={`${styles.experienceItem} ${
+                isVisible ? styles.fadeIn : styles.fadeOut
+              }`}
+            >
               <h3 className={styles.role}>{exp.role}</h3>
               <p className={styles.company}>
                 {exp.company}, {exp.location}

@@ -1,6 +1,6 @@
 .work {
   width: 87%;
-  color: #fff;
+  color: #262626;
   margin: auto;
   padding-top: 100px;
 }
@@ -33,7 +33,7 @@
 .projectButton {
   background: none;
   border: none;
-  color: #fff;
+  color: #282828;
   font-size: 1rem;
   text-align: left;
   cursor: pointer;
@@ -44,7 +44,7 @@
 }
 
 .projectButton:hover, .projectButton.active {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(67, 67, 67, 0.445);
 }
 
 .projectInfo {
@@ -83,17 +83,18 @@
 .sectionButton {
   background: none;
   border: none;
-  color: #ffffff;
+  color: #3d3d3d;
   font-size: 1rem;
   text-align: left;
   cursor: pointer;
   padding: 10px;
   transition: background 0.3s;
   border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
 }
 
 .sectionButton:hover, .sectionButton.activeSection {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(99, 99, 99, 0.568);
 }
 
 .carousel {
