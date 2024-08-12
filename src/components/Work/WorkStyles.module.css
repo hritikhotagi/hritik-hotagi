@@ -1,3 +1,33 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 0.2s ease-in forwards;
+}
+
+.fadeOut {
+  animation: fadeOut 0.2s ease-out forwards;
+}
+
 .work {
   width: 87%;
   color: #262626;
@@ -33,6 +63,7 @@
 .projectButton {
   background: none;
   border: none;
+  /* border-radius: 15px; */
   color: #282828;
   font-size: 1rem;
   text-align: left;
@@ -54,7 +85,9 @@
   flex-direction: column;
   justify-content: center;
   background-color: rgb(255, 255, 255);
+  border-radius: 20px;
   color: rgb(0, 0, 0);
+  margin-left: 10px;
 }
 
 .projectDetails {
@@ -191,6 +224,9 @@
     width: 97px;
   }
 
+  .projectInfo {
+    margin-left: 0px;
+  }
   .content {
       flex-direction: column; 
       background-color: #ecfcff;

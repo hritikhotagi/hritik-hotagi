@@ -86,7 +86,7 @@ function Work() {
         description:
           "Developed tailored learning experiences for special needs kids by implementing AR and VR technologies, resulting in a significant improvement in social skills among autistic children as measured by engagement metrics.",
         images: [ar2, ar1, ar3,ar4],
-        githubLink: "https://github.com/your-repo/ar-app"
+        githubLink: "https://github.com/hritikhotagi/AutismAR.github.io.git"
       },
       {
         title: "Car Renting and Hiring Application.",
@@ -107,6 +107,7 @@ function Work() {
         description:
           "Accomplished dissemination of critical information about the COVID-19 virus by implementing a dynamic website, which led to increased public awareness and access to real-time data on available hospital beds and infection counts.",
         images: [c1,c2,c3,c4,c5],
+        githubLink: "https://github.com/hritikhotagi/covidguidewebsite.github.io.git"
       },
       {
         title: "Blog Application",
@@ -186,6 +187,7 @@ function Work() {
   const [selectedSection, setSelectedSection] = useState(sections[0]);
   const [activeProject, setActiveProject] = useState(0);
   const [activeImage, setActiveImage] = useState(0);
+  const [fade, setFade] = useState(true);
 
   const handleNextImage = () => {
     setActiveImage((prevImage) => (prevImage + 1) % projects[selectedSection][activeProject].images.length);
@@ -199,6 +201,15 @@ function Work() {
 
   const handleDotClick = (index) => {
     setActiveImage(index);
+  };
+
+  const handleProjectChange = (index) => {
+    setFade(false); // Trigger fade-out
+    setTimeout(() => {
+      setActiveProject(index);
+      setActiveImage(0);
+      setFade(true); // Trigger fade-in after fade-out is complete
+    }, 300); // Duration of fade-out
   };
 
   return (
@@ -230,17 +241,14 @@ function Work() {
                 className={`${styles.projectButton} ${
                   activeProject === index ? styles.active : ""
                 }`}
-                onMouseEnter={() => setActiveProject(index)}
-                onClick={() => {
-                  setActiveProject(index);
-                  setActiveImage(0);
-                }}
+                onMouseEnter={() => handleProjectChange(index)}
+                onClick={() => handleProjectChange(index)}
               >
                 {project.title}
               </button>
             ))}
           </div>
-          <div className={styles.projectInfo}>
+          <div className={`${styles.projectInfo} ${fade ? styles.fadeIn : styles.fadeOut}`}>
             {projects[selectedSection][activeProject] && (
               <>
                 <div className={styles.carousel}>
@@ -248,14 +256,13 @@ function Work() {
                     &#10094;
                   </button>
                   {projects[selectedSection][activeProject].images.map((img, index) => (
-                    <div className={styles.imageContainer}>
-                        <img
-                        key={index}
+                    <div className={styles.imageContainer} key={index}>
+                      <img
                         src={img}
                         alt={`${projects[selectedSection][activeProject].title} ${index + 1}`}
                         className={`${styles.carouselImage} ${activeImage === index ? styles.active : ""}`}
                         loading="lazy"
-                        />
+                      />
                     </div>
                   ))}
                   <button className={`${styles.arrow} ${styles.right}`} onClick={handleNextImage}>

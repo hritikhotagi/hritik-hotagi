@@ -114,7 +114,21 @@
 
 @media (max-width: 1200px) {
   .projectImage {
-    width: 37%;
+    width: 32%;
+    animation: rotateImage 5s infinite linear;
+  }
+}
+
+@media (max-width:1050px) {
+  .projectImage {
+    width: 38%;
+    animation: rotateImage 5s infinite linear;
+  }
+}
+
+@media (max-width:900px) {
+  .projectImage {
+    width: 46%;
     animation: rotateImage 5s infinite linear;
   }
 }
