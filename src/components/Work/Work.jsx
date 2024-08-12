@@ -86,6 +86,7 @@ function Work() {
         description:
           "Developed tailored learning experiences for special needs kids by implementing AR and VR technologies, resulting in a significant improvement in social skills among autistic children as measured by engagement metrics.",
         images: [ar2, ar1, ar3,ar4],
+        githubLink: "https://github.com/your-repo/ar-app"
       },
       {
         title: "Car Renting and Hiring Application.",
@@ -253,6 +254,7 @@ function Work() {
                         src={img}
                         alt={`${projects[selectedSection][activeProject].title} ${index + 1}`}
                         className={`${styles.carouselImage} ${activeImage === index ? styles.active : ""}`}
+                        loading="lazy"
                         />
                     </div>
                   ))}
@@ -276,6 +278,17 @@ function Work() {
                   <p className={styles.projectdesc}>
                     {projects[selectedSection][activeProject].description}
                   </p>
+                  
+                  {projects[selectedSection][activeProject].githubLink && (
+                    <a
+                      href={projects[selectedSection][activeProject].githubLink}
+                      className={styles.githubButton}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      View on GitHub
+                    </a>
+                  )}
                 </div>
               </>
             )}

@@ -44,7 +44,7 @@
 }
 
 .projectButton:hover, .projectButton.active {
-  background-color: rgba(67, 67, 67, 0.445);
+  background-color: rgba(145, 145, 145, 0.568);
 }
 
 .projectInfo {
@@ -63,6 +63,7 @@
   flex-direction: column;
   justify-content: flex-start;
   padding: 25px;
+  padding-top: 50px;
 }
 
 .projecttitle{
@@ -85,6 +86,7 @@
   border: none;
   color: #3d3d3d;
   font-size: 1rem;
+  font-weight: 700;
   text-align: left;
   cursor: pointer;
   padding: 10px;
@@ -94,7 +96,7 @@
 }
 
 .sectionButton:hover, .sectionButton.activeSection {
-  background-color: rgba(99, 99, 99, 0.568);
+  background-color: rgba(145, 145, 145, 0.568);
 }
 
 .carousel {
@@ -130,18 +132,18 @@
 }
 
 .arrow.left {
-  left: 10px;
+  left: 0px;
 }
 
 .arrow.right {
-  right: 10px;
+  right: 0px;
 }
 
 .dots {
   display: flex;
   justify-content: center;
   position: absolute;
-  bottom: 10px;
+  bottom: -20px;
   width: 100%;
 }
 
@@ -159,11 +161,39 @@
   background-color: rgba(0, 0, 0, 1);
 }
 
+.githubButton {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #edfbff;
+  border: solid 2px #21b1d5;
+  color: #232323;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+  width: 115px;
+}
+
+.githubButton:hover {
+  background-color: #21b1d5;
+  color: #ffffff;
+}
+
+
 /* Media query for mobile view */
 @media (max-width: 768px) {
+
+  .githubButton {
+    font-weight: 400;
+    padding: 10px 12px;
+    font-size: 14px;
+    width: 97px;
+  }
+
   .content {
       flex-direction: column; 
-      background-color: rgb(32, 32, 32);
+      background-color: #ecfcff;
       border-radius: 10px;
   }
 
@@ -178,8 +208,14 @@
   }
 
   .projectInfo {
+      padding-top: 20px;
       width: 100%;
-      height: auto; /* Allow content to adjust height based on content */
+      height: auto; 
+  }
+
+  .imageContainer{
+    width: 80%;
+    margin: auto;
   }
 
   .carouselImage {
