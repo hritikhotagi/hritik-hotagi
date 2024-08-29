@@ -61,6 +61,8 @@ import ddm8 from "../../assets/uiux/ddm8.png";
 import ddm9 from "../../assets/uiux/ddm9.png";
 import ddm10 from "../../assets/uiux/ddm10.png";
 import ddm11 from "../../assets/uiux/ddm11.png";
+import db1 from "../../assets/uiux/db1.png";
+import db2 from "../../assets/uiux/db2.png";
 
 import mb1 from "../../assets/logo/mb1.png";
 import mb2 from "../../assets/logo/mb2.png";
@@ -86,6 +88,7 @@ function Work() {
         description:
           "Developed tailored learning experiences for special needs kids by implementing AR and VR technologies, resulting in a significant improvement in social skills among autistic children as measured by engagement metrics.",
         images: [ar2, ar1, ar3,ar4],
+        techStack: ["AR", "VR", "Unity", "Vuforia", "C#", "Blender"],
         githubLink: "https://github.com/hritikhotagi/AutismAR.github.io.git"
       },
       {
@@ -93,6 +96,7 @@ function Work() {
         description:
           "Accomplished a streamlined car rental and hiring process by implementing a Java application, which led to an efficient and user-friendly booking system.",
         images: [car1],
+        techStack: ["Advance Java (AJ)", "Applets"],
         githubLink: "https://github.com/hritikhotagi/CarsforUs.git"
       },
     ],
@@ -102,12 +106,14 @@ function Work() {
         description:
           "Accomplished analysis of growth, sales, and user retention metrics by implementing a dynamic dashboard for monitoring real-time user activities and events, which led to great decision-making and strategic planning for clients.",
         images: [a1,a2,a3,a4],
+        techStack: ["Angular", "Node.js", "Express.js", "MongoDB", "Auth0"]
       },
       {
         title: "Covid Guide Application",
         description:
           "Accomplished dissemination of critical information about the COVID-19 virus by implementing a dynamic website, which led to increased public awareness and access to real-time data on available hospital beds and infection counts.",
         images: [c1,c2,c3,c4,c5],
+        techStack: ["Python", "Django", "HTML", "CSS"],
         githubLink: "https://github.com/hritikhotagi/covidguidewebsite.github.io.git"
       },
       {
@@ -115,38 +121,51 @@ function Work() {
         description:
           "The Blog Application allows users to create, edit, view, and delete blog posts, with secure authentication ensuring users can only modify their own content. Built with React, it features a responsive design, a rich text editor, and a user-friendly interface for seamless blogging.",
         images: [blog],
+        techStack: ["React", "Node.js", "Express.js", "MongoDB"]
       },
     ],
     "UI/UX": [
+      {
+        title: "Live Dashboard",
+        description:
+          "Redesign of a live dashboard",
+        images: [db1,db2],
+        techStack: ["Figma"]
+      },
       {
         title: "Car and Bike Analysis",
         description:
           "Will get all the analytical information about the indian vechicles, application created by Lazurus Benjamin",
         images: [cnbd,cba11,cba12,cba2,cba21,cba3,cba4,cba5],
+        techStack: ["Figma", "Javascript", "HTML", "CSS"]
       },
       {
         title: "Deep Sea Exploration Application",
         description:
           "An application showcasing new ocean explorations, where users can post and view discoveries. The content is moderated by an admin to ensure the accuracy and validity of the information shared.",
         images: [d1,d2,d3,d4,d5,d6],
+        techStack: ["Angular", "Figma", "Node.js", "Express.js", "Typescript", "MongoDB"]
       },
       {
         title: "Cab Booking System",
         description:
           "A replication of modern cab booking apps, offering similar features for booking rides.",
         images: [v1,v2,v3,v4,v5,v6,v7,v8,v9],
+        techStack: ["Figma", "Photoshop", "Adobe XD"]
       },
       {
         title: "E-commerce Application",
         description:
           "A replication of modern e-commerce website, offering similar features for online shoping.",
         images: [e1,e2,e3,e4,e5,e6,e7,e8,e9],
+        techStack: ["Figma", "Photoshop", "Adobe XD"]
       },
       {
         title: "Church Application",
         description:
           "An application designed for church communities, enabling members to stay connected, view events, and access church resources conveniently.",
         images: [ddm1,ddm2,ddm3,ddm4,ddm5,ddm6,ddm7,ddm8,ddm9,ddm10,ddm11],
+        techStack: ["Figma", "Photoshop", "Adobe XD"]
       },
     ],
     Logos: [
@@ -154,21 +173,25 @@ function Work() {
         title: "Metal Beats",
         description: "",
         images: [mb1,mb2],
+        techStack: ["Adobe Photoshop", "Adobe Illustration"]
       },
       {
         title: "SB2 Group",
         description: "",
         images: [sb23,sb24,sb21,sb22],
+        techStack: ["Adobe Photoshop", "Adobe Illustration"]
       },
       {
         title: "Wish Tank",
         description: "",
         images: [w],
+        techStack: ["Adobe Photoshop", "Adobe Illustration"]
       },
       {
         title: "CentuRITon",
         description: "",
         images: [rit],
+        techStack: ["Adobe Photoshop", "Adobe Illustration"]
       },
     ],
     "Graphic Designs": [
@@ -176,11 +199,13 @@ function Work() {
         title: "Banners",
         description: "",
         images: [cba11],
+        techStack: ["Adobe Photoshop", "Adobe Illustration"]
       },
       {
         title: "Posters",
         description: "",
         images: [cba11],
+        techStack: ["Adobe Photoshop", "Adobe Illustration"]
       },
     ],
   };
@@ -215,96 +240,102 @@ function Work() {
 
   return (
     <section id="work" className={styles.work}>
-      <div className={styles.container}>
-        <p className={styles.title}>Key Projects</p>
-        <div className={styles.sectionMenu}>
-          {sections.map((section, index) => (
+    <div className={styles.container}>
+      <p className={styles.title}>Key Projects</p>
+      <div className={styles.sectionMenu}>
+        {sections.map((section, index) => (
+          <button
+            key={index}
+            className={`${styles.sectionButton} ${
+              selectedSection === section ? styles.activeSection : ""
+            }`}
+            onClick={() => {
+              setSelectedSection(section);
+              setActiveProject(0);
+              setActiveImage(0);
+            }}
+          >
+            {section}
+          </button>
+        ))}
+      </div>
+      <div className={styles.content}>
+        <div className={styles.index}>
+          {projects[selectedSection].map((project, index) => (
             <button
               key={index}
-              className={`${styles.sectionButton} ${
-                selectedSection === section ? styles.activeSection : ""
+              className={`${styles.projectButton} ${
+                activeProject === index ? styles.active : ""
               }`}
-              onClick={() => {
-                setSelectedSection(section);
-                setActiveProject(0);
-                setActiveImage(0);
-              }}
+              onMouseEnter={() => handleProjectChange(index)}
+              onClick={() => handleProjectChange(index)}
             >
-              {section}
+              {project.title}
             </button>
           ))}
         </div>
-        <div className={styles.content}>
-          <div className={styles.index}>
-            {projects[selectedSection].map((project, index) => (
-              <button
-                key={index}
-                className={`${styles.projectButton} ${
-                  activeProject === index ? styles.active : ""
-                }`}
-                onMouseEnter={() => handleProjectChange(index)}
-                onClick={() => handleProjectChange(index)}
-              >
-                {project.title}
-              </button>
-            ))}
-          </div>
-          <div className={`${styles.projectInfo} ${fade ? styles.fadeIn : styles.fadeOut}`}>
-            {projects[selectedSection][activeProject] && (
-              <>
-                <div className={styles.carousel}>
-                  <button className={`${styles.arrow} ${styles.left}`} onClick={handlePrevImage}>
-                    &#10094;
-                  </button>
-                  {projects[selectedSection][activeProject].images.map((img, index) => (
-                    <div className={styles.imageContainer} key={index}>
-                      <img
-                        src={img}
-                        alt={`${projects[selectedSection][activeProject].title} ${index + 1}`}
-                        className={`${styles.carouselImage} ${activeImage === index ? styles.active : ""}`}
-                        loading="lazy"
-                      />
-                    </div>
-                  ))}
-                  <button className={`${styles.arrow} ${styles.right}`} onClick={handleNextImage}>
-                    &#10095;
-                  </button>
-                  <div className={styles.dots}>
-                    {projects[selectedSection][activeProject].images.map((_, index) => (
-                      <span
-                        key={index}
-                        className={`${styles.dot} ${activeImage === index ? styles.active : ""}`}
-                        onClick={() => handleDotClick(index)}
-                      ></span>
-                    ))}
+        <div className={`${styles.projectInfo} ${fade ? styles.fadeIn : styles.fadeOut}`}>
+          {projects[selectedSection][activeProject] && (
+            <>
+              <div className={styles.carousel}>
+                <button className={`${styles.arrow} ${styles.left}`} onClick={handlePrevImage}>
+                  &#10094;
+                </button>
+                {projects[selectedSection][activeProject].images.map((img, index) => (
+                  <div className={styles.imageContainer} key={index}>
+                    <img
+                      src={img}
+                      alt={`${projects[selectedSection][activeProject].title} ${index + 1}`}
+                      className={`${styles.carouselImage} ${activeImage === index ? styles.active : ""}`}
+                      loading="lazy"
+                    />
                   </div>
+                ))}
+                <button className={`${styles.arrow} ${styles.right}`} onClick={handleNextImage}>
+                  &#10095;
+                </button>
+                <div className={styles.dots}>
+                  {projects[selectedSection][activeProject].images.map((_, index) => (
+                    <span
+                      key={index}
+                      className={`${styles.dot} ${activeImage === index ? styles.active : ""}`}
+                      onClick={() => handleDotClick(index)}
+                    ></span>
+                  ))}
                 </div>
-                <div className={styles.projectDetails}>
-                  <h2 className={styles.projecttitle}>
-                    {projects[selectedSection][activeProject].title}
-                  </h2>
-                  <p className={styles.projectdesc}>
-                    {projects[selectedSection][activeProject].description}
-                  </p>
-                  
-                  {projects[selectedSection][activeProject].githubLink && (
-                    <a
-                      href={projects[selectedSection][activeProject].githubLink}
-                      className={styles.githubButton}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      View on GitHub
-                    </a>
-                  )}
+              </div>
+              <div className={styles.projectDetails}>
+                <h2 className={styles.projecttitle}>
+                  {projects[selectedSection][activeProject].title}
+                </h2>
+                <div className={styles.techStack}>
+                  {projects[selectedSection][activeProject].techStack.map((tech, index) => (
+                    <span key={index} className={styles.techChip}>
+                      {tech}
+                    </span>
+                  ))}
                 </div>
-              </>
-            )}
-          </div>
+                <p className={styles.projectdesc}>
+                  {projects[selectedSection][activeProject].description}
+                </p>
+                {projects[selectedSection][activeProject].githubLink && (
+                  <a
+                    href={projects[selectedSection][activeProject].githubLink}
+                    className={styles.githubButton}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View on GitHub
+                  </a>
+                )}
+              </div>
+            </>
+          )}
         </div>
       </div>
-    </section>
-  );
+    </div>
+  </section>
+);
 }
 
 export default Work;

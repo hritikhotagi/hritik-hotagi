@@ -30,6 +30,7 @@
     flex-direction: column;
     position: relative;
     padding-top: 30px;
+    margin-top: -10px;
     opacity: 0; /* Initially hidden */
     transform: translateY(20px); /* Initially positioned lower */
     transition: opacity 1s ease, transform 0.5s ease;
