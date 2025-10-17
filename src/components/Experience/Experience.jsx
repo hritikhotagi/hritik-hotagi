@@ -8,6 +8,15 @@ function Experience() {
 
   const experiences = [
     {
+      role: "Senior Software Developer",
+      company: "MsgKart",
+      location: "Bengaluru, Karnataka",
+      duration: "Oct 2024 – Present",
+      responsibilities: [
+        "Leading the end-to-end design and development of new client requirements in the web application, utilizing a stack of Angular, Typescript, Node.js, Javascript, React and more. Architecting and integrating AI-driven agents into core workflows, aiming to automate complex tasks and improve operational efficiency.",
+      ],
+    },
+    {
       role: "Solutions Engineer Level – 1",
       company: "Meltwater",
       location: "Bengaluru, Karnataka",

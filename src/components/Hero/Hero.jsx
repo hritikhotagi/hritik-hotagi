@@ -22,7 +22,7 @@ function Hero() {
               <i className="fab fa-instagram"></i>
             </a>
           </div>
-          <a href="https://drive.google.com/file/d/1TaQGlp8jVhyChQukKJq730Y3cnEFy36r/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+          <a href="https://drive.google.com/file/d/1dI525M56VtGS8uICuoSnbcz1EvgTIxQe/view?usp=sharing" target="_blank" rel="noopener noreferrer">
             <button className={styles.downloadBtn}>
                 <FaDownload className={styles.downloadIcon} /> Download CV
             </button>
